@@ -440,7 +440,7 @@ class ColBERT(LateInteractionModel):
 
     def train(self, data_dir, training_config: ColBERTConfig):
         training_config = ColBERTConfig.from_existing(self.config, training_config)
-        training_config.nway = 8 # was 2, set to 8 by AK
+        training_config.nway = 2 
         with Run().context(self.run_config):
             trainer = Trainer(
                 triples=str(data_dir / "triples.train.colbert.jsonl"),
