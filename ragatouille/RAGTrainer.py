@@ -217,7 +217,6 @@ class RAGTrainer:
             total_triplets = len(self.training_triplets)
 
         training_config = ColBERTConfig(
-            nway = 8, # this line added by AK 
             bsize=batch_size,
             model_name=self.model_name,
             name=self.model_name,
